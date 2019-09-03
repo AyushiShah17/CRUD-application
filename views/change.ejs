@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To view details from json file</title>
+   
+
+</head>
+
+<body>
+    <table style="width:100%" border="1px solid black">
+        <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Age</th>
+            <th>Change</th>
+            <th>Delete</th>
+        </tr>
+
+        <% for (var i = 0; i < jsonContent.fetchDetails.length; i++) { %>
+            
+        <tr>
+            <td><%= jsonContent.fetchDetails[i].Name %></td>
+            <td><%= jsonContent.fetchDetails[i].Email %></td>
+            <td><%= jsonContent.fetchDetails[i].Age %></td>
+            <!-- <td><button style="text-decoration: underline; color:blue;">Edit</button></td> -->
+            <td><a href="/addUser/<%= jsonContent.fetchDetails[i].id %>">Edit</a></td>
+            <td style="color: red"><a href="/addUser/delete/<%= jsonContent.fetchDetails[i].id %>" >Remove</button></td>
+            
+        </tr> 
+        <% } %>
+    </table>
+</body>
+
+</html>

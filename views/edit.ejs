@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>To edit the following details</h2>
+
+<form action="/addUser/<%=myObj.id%>" method="POST">
+     <input type="hidden" name="_method" value="put" />
+  Name:<br>
+  <input type="text" name="Name" value="<%= myObj.Name%>">
+  <br>
+  Email<br>
+  <input type="email" name="Email" value="<%= myObj.Email%>">
+  <br>
+   Age<br>
+  <input type="number" name="Age" value="<%= myObj.Age%>">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
